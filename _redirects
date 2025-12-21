@@ -1,11 +1,1 @@
-# فيسبوك: أي رابط يبدأ بـ /increase/facebook/
-/increase/facebook/*  http://85.215.159.4:9658/increase/facebook/:splat  200!
-
-# انستقرام: أي رابط يبدأ بـ /increase/Instagram/
-/increase/Instagram/*  http://85.215.159.4:9660/increase/Instagram/:splat  200!
-
-# سناب شات: أي رابط يبدأ بـ /increase/Snapchat/
-/increase/Snapchat/*   http://85.215.159.4:9661/increase/Snapchat/:splat  200!
-
-# صفحة رئيسية بسيطة إذا دخل على الرابط الأساسي فقط
-/                     /index.html  200
+/increase/*  http://85.215.159.4:9658/increase/:splat  200
