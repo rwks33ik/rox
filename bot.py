@@ -2,7 +2,6 @@ import os
 import random
 import requests
 
-# جلب المتغيرات من إعدادات GitHub الآمنة
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
 CHANNEL_ID = os.environ.get("CHANNEL_ID")
 
