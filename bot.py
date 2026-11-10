@@ -28,7 +28,7 @@ HIJRI_API = "https://api.aladhan.com/v1/gToH"
 TELEGRAM_LIMIT = 4096
 
 # احتياطي إن لم يوجد CHANNEL_ID في الـ Secrets (يقبل @username أو -100...)
-FALLBACK_CHANNELS = []
+FALLBACK_CHANNELS = [@VlP_2P]
 
 session = requests.Session()
 session.headers.update({"User-Agent": "islamic-telegram-bot/2.0"})
