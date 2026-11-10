@@ -27,8 +27,8 @@ QURAN_API = "https://api.alquran.cloud/v1"
 HIJRI_API = "https://api.aladhan.com/v1/gToH"
 TELEGRAM_LIMIT = 4096
 
-# احتياطي إن لم يوجد CHANNEL_ID في الـ Secrets (يقبل @username أو -100...)
-FALLBACK_CHANNELS = [@VlP_2P]
+# ✏️ ضع هنا يوزر قناتك (أو أكثر من قناة) — يقبل @username أو -100...
+CHANNELS = ["@VlP_2P"]
 
 session = requests.Session()
 session.headers.update({"User-Agent": "islamic-telegram-bot/2.0"})
@@ -491,7 +491,7 @@ def load_channels():
             out.append(int(part))
         else:
             out.append(part if part.startswith("@") else "@" + part)
-    return out or FALLBACK_CHANNELS
+    return out
 
 
 def send(chat_id, text):
@@ -527,7 +527,7 @@ def main():
         print(msg)
         return
 
-    channels = load_channels()
+    channels = CHANNELS if CHANNELS and CHANNELS != ["@your_channel"] else load_channels()
     if not BOT_TOKEN:
         print("خطأ: BOT_TOKEN غير موجود.")
         sys.exit(1)
