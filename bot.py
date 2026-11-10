@@ -9,7 +9,7 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN")
 # ضع هنا معرفات القنوات أو المجموعات
 # يقبل ID القناة (يبدأ بـ -100) أو اليوزر نيم للقنوات العامة
 CHANNELS = [
-    "@your_channel_1",
+    "@VlP_2P",
     "@your_channel_2",
     -1001234567890,
 ]
