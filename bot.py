@@ -11,7 +11,7 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN")
 POST_TYPE = (os.environ.get("POST_TYPE") or "random").strip().lower()
 PLATFORM = "https://alfathplatform3.vercel.app"
 
-CHANNELS = []
+CHANNELS = [@VlP_2P, @zz28r]
 
 SURAHS = [
     "الفاتحة","البقرة","آل عمران","النساء","المائدة","الأنعام","الأعراف","الأنفال","التوبة","يونس","هود","يوسف",
