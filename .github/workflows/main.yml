@@ -2,10 +2,18 @@ name: Telegram Daily Post
 
 "on":
   schedule:
-    # التوقيت في GitHub بالـ UTC. توقيت مكة = UTC+3
-    - cron: '0 19 * * *'   # 10:00 مساءً بتوقيت مكة
-    - cron: '0 1 * * *'    # 04:00 فجراً بتوقيت مكة
+    - cron: '0 19 * * *'
+    - cron: '0 1 * * *'
   workflow_dispatch:
+    inputs:
+      kind:
+        description: "نوع المنشور"
+        type: choice
+        default: random
+        options:
+          - random
+          - ayah
+          - hadith
 
 permissions:
   contents: read
@@ -29,10 +37,11 @@ jobs:
           python-version: '3.10'
 
       - name: Install Dependencies
-        run: pip install requests tzdata
+        run: pip install requests
 
       - name: Run Script
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
+          POST_TYPE: ${{ github.event.inputs.kind || 'random' }}
         run: python bot.py
