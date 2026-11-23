@@ -1,6 +1,6 @@
 name: Telegram Daily Post
 
-"on":
+on:
   schedule:
     - cron: '0 19 * * *'
     - cron: '0 1 * * *'
@@ -13,7 +13,16 @@ name: Telegram Daily Post
         options:
           - random
           - ayah
+          - short_surah
           - hadith
+          - dua
+          - azkar
+          - prophet
+          - quran_story
+          - asmaa
+          - question
+          - tajweed
+          - ruqyah
 
 permissions:
   contents: read
